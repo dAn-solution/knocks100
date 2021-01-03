@@ -23,6 +23,12 @@ RUN pip install --upgrade pip
 RUN apt-get update
 RUN apt-get install -y libsm6 libxext6 libxrender-dev libglib2.0-0
 RUN pip install opencv-python
+
+# install pulp
+RUN pip install pulp
+
+# install ortoolpy
+RUN pip install ortoolpy
  
 WORKDIR /
 RUN mkdir /work

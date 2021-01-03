@@ -3,6 +3,7 @@
 2. Desktop下にgit clone
 3. 権限がrootになっていてchownで変更
 4. Dokerfileを作成　かめさんのPython講座（ブログ）にあるDockerfileを流用
+  docker run -p 8888:8888 -v ~/Desktop/knocks1000:/work --name my-knock 2e5f77587fee
 5. sampleデータをdownload
 2020.12.3
 1. knock100下でdocker build .
@@ -13,3 +14,10 @@
 2020.12.28
 1. ノック057を自力でコーディング
 　　サンプルのコードはわかりづらい
+2021.01.02
+1. ノック061でpulpがimportできない
+2021.01.03
+1. puplのインストールを追加
+　docker run -p 8888:8888 -v ~/Desktop/knocks100:/work --name my-knock f55a7aaf2e5d
+2. ortoolpyのインストールを追加
+  docker run -p 8888:8888 -v ~/Desktop/knocks100:/work --name my-knock 8b46fd001f1f
