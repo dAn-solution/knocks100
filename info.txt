@@ -21,3 +21,8 @@
 　docker run -p 8888:8888 -v ~/Desktop/knocks100:/work --name my-knock f55a7aaf2e5d
 2. ortoolpyのインストールを追加
   docker run -p 8888:8888 -v ~/Desktop/knocks100:/work --name my-knock 8b46fd001f1f
+2021.01.05
+1. ノック057の
+　　if df_tr[df_pos.columns[i][df_pos.columns[j]]]:
+　　の意味が不明　必ずTrueになるのではないか　何を聞いているのだろう？
+　　コメントで潰しても正常に稼働
