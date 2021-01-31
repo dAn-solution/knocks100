@@ -26,3 +26,46 @@
 　　if df_tr[df_pos.columns[i][df_pos.columns[j]]]:
 　　の意味が不明　必ずTrueになるのではないか　何を聞いているのだろう？
 　　コメントで潰しても正常に稼働
+2021.01.18
+1. ノック081で import cv2 がエラー
+　　ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+　　以下で解決
+　　docker ps
+    docker exec -it my-knock bash
+    で中に入って
+    pip install opencv-python
+    pip install opencv-contrib-python
+    apt-get install -y libgl1-mesa-dev
+    Dockerfileの修正は後日の予定
+2. ノック081を続けると
+　　The kernel appears to have died. It will restart automatically
+　　というエラー
+	メモリが不足しているらしい
+2021.01.19
+	AWSへ
+
+
+2021.01.26
+	google colabo
+	ノック085
+	https://qiita.com/FrozenVoice/items/d1dc5f3d780f5097bfab
+	https://hk29.hatenablog.jp/entry/2019/10/13/013741
+
+2021.01.27
+	ノック087
+	https://python5.com/q/fayueaio
+	私はアップロードされたビデオから高さと幅を取得しようとしていました:
+	width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
+	height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
+	私はそれを次のように変更しました:
+	width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+	height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+2021.01.28
+	video = cv2.VideoWriter(movie_name, fourcc, 30, (width,height))
+	が正解
+	video = cv2.VideoWriter(movie_name, fourcc, 30, (width, height))
+	だと書き込みがされない
+
+2021.01/31
+	100本ノックいったん終了
